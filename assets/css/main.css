@@ -236,6 +236,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #000;
+  text-decoration: none;
 }
 
 .pupose .card-link {
@@ -362,12 +364,23 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 10;
 }
 
-.advocacy .video-thumb-1 .btn-player button {
+.advocacy .video-thumb-1 .btn-player .btn-yl {
   width: 50px;
   height: 50px;
   background-color: var(--color-yellow);
   border: none;
   border-radius: 50%;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
 }
 
 .advocacy .video-thumb-1 .layer {
@@ -939,5 +952,25 @@ article p {
 .ill.ill-2 {
   top: 15%;
   right: -100px;
+}
+
+.custom-modal .modal-title {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.custom-modal .btn-submit {
+  background-color: #F00;
+  height: 50px;
+  border: 1px solid #000;
+  font-size: 21px;
+  color: #FFF;
+  border-radius: 0;
+  width: 200px;
+}
+
+.custom-modal .form-control {
+  border-radius: 0;
+  border: 1px solid #DDD;
 }
 /*# sourceMappingURL=main.css.map */

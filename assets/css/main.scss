@@ -185,6 +185,8 @@ h1,h2,h3,h4,h5,h6{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                color: #000;
+                text-decoration: none;
             }
         }
     }
@@ -284,12 +286,17 @@ h1,h2,h3,h4,h5,h6{
             align-items: center;
             width: 100px;
             z-index: 10;
-            button{
+            .btn-yl{
                 width: 50px;
                 height: 50px;
                 background-color: var(--color-yellow);
                 border: none;
                 border-radius: 50%;
+                color: #000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
             }
         }
         .layer{
@@ -823,5 +830,26 @@ article{
     &.ill-2{
         top: 15%;
         right: -100px;
+    }
+}
+
+
+.custom-modal{
+    .modal-title{
+        font-size: 26px;
+        font-weight: 500;
+    }
+    .btn-submit{
+        background-color: #F00;
+        height: 50px;
+        border: 1px solid #000;
+        font-size: 21px;
+        color: #FFF;
+        border-radius: 0;
+        width: 200px;
+    }
+    .form-control{
+        border-radius: 0;
+        border: 1px solid #DDD;
     }
 }
