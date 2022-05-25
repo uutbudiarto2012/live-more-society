@@ -28,36 +28,17 @@
 const form = document.querySelector("#form-ibg");
 const myModal = document.querySelector(".modal");
 
-const business_name = form.querySelector('input[name="business_name"]');
-const business_type = form.querySelector('input[name="business_type"]');
-const address = form.querySelector('input[name="address"]');
-const postal_code = form.querySelector('input[name="postal_code"]');
 const name = form.querySelector('input[name="name"]');
+const hp = form.querySelector('input[name="hp"]');
 const email = form.querySelector('input[name="email"]');
-const phone = form.querySelector('input[name="phone"]');
+const instagram = form.querySelector('input[name="instagram"]');
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (
-    (!business_name.value,
-    !business_type.value,
-    !address.value,
-    !postal_code.value,
-    !name.value,
-    !email.value,
-    !phone.value)
-  ) {
+  if ((!name.value, !hp.value, !email.value, !instagram.value)) {
     return;
   }
-  const data = {
-    business: business_name.value,
-    contact_person: business_type.value,
-    address: address.value,
-    postal_code: postal_code.value,
-    name: name.value,
-    email: email.value,
-    phone: phone.value,
-  };
+  const data = { name, hp, email, instagram };
 
   $("#btnRegister").attr("disabled");
   fetch("https://dbslivemoresociety.com/digibanking", {

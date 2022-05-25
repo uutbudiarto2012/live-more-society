@@ -531,6 +531,7 @@ article p {
 .user-list .btn-register-now {
   height: 50px;
   padding: 0 20px;
+  min-width: 170px;
   background-color: #F00;
   border: 1px solid #000;
   color: #F4F2EC;
@@ -742,7 +743,7 @@ article p {
   top: 100vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ill-round-1 {
     height: 200px;
     width: 200px;
@@ -884,10 +885,11 @@ article p {
   .user-list .btn-register-now {
     height: 50px;
     padding: 0 20px;
+    min-width: 170px;
     background-color: #F00;
     border: 1px solid #000;
     color: #F4F2EC;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
   }
   article .title {
