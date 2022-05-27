@@ -20,7 +20,8 @@
 })();
 
 const formSignup = document.querySelector("#form-signup");
-formSignup.addEventListener("submit", function () {
+formSignup.addEventListener("submit", function (e) {
+  e.preventDefault();
   if (!this.checkValidity()) {
     console.log("INVALID FORM");
     return;
@@ -40,8 +41,37 @@ formSignup.addEventListener("submit", function () {
   console.log(this.getAttribute("data-gotopage"));
 
   // fetch
-  //this.reset();
+
+  fetch("https://dbslivemoresociety.com/digibanking", {
+    method: "POST",
+    body: JSON.stringify(dataToSubmit),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      $("#btnSubmit").removeAttr("disabled");
+      return Promise.reject(response);
+    })
+    .then(function (data) {
+      $("#btnSubmit").removeAttr("disabled");
+      console.log(data);
+    })
+    .catch(function (error) {
+      $("#btnSubmit").removeAttr("disabled");
+      console.warn("Something went wrong.", error);
+    });
+  redirectPage(this);
 
   //  simalasi redirect
-  window.location.href = this.getAttribute("data-gotopage");
+  //   window.location.href = this.getAttribute("data-gotopage");
 });
+
+const redirectPage = (form) => {
+  window.location.href = form.getAttribute("data-gotopage");
+  //   $("#form-signup").get(0).reset();
+  //   $("#form-signup").removeClass("was-validated");
+};
