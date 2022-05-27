@@ -602,42 +602,58 @@
             household that wants to segregate their waste. Simply fill the
             form below and our team will contact you!
           </p>
-          <form action="">
+          <form
+            data-gotopage="https://www.dbs.id/id/sme-id/day-to-day/accounts.page?logStat=accepted"
+            form-submit-ajax="https://dbslivemoresociety.com/digibanking"
+            class="needs-validation mt-5 mb-4"
+            novalidate 
+            data-inView="fadeInUp"
+            id="form-signup"
+          >
             <div class="input-wrapper">
-              <input type="text" placeholder="Name" class="form-control form-control-lg">
+              <input type="text" required name="name" placeholder="Name" class="form-control form-control-lg">
+              <div class="invalid-feedback text-dark">This field is required</div>
             </div>
             <div class="input-wrapper">
-              <input type="number" placeholder="Phone number / Whatsapp" class="form-control form-control-lg">
+              <input type="tel" required name="phone" placeholder="Phone number / Whatsapp" class="form-control form-control-lg">
+              <div class="invalid-feedback text-dark">This field is required</div>
             </div>
             <div class="input-wrapper">
-              <input type="email" placeholder="Email address" class="form-control form-control-lg">
+              <input type="email" required name="email" placeholder="Email address" class="form-control form-control-lg">
+              <div class="invalid-feedback text-dark">This field is required</div>
             </div>
             <div class="input-wrapper">
-              <input type="text" placeholder="Address" class="form-control form-control-lg">
+              <input type="text" name="address" required placeholder="Address" class="form-control form-control-lg">
+              <div class="invalid-feedback text-dark">This field is required or valid email</div>
             </div>
             <div class="input-wrapper">
-              <select name="" id="" class="form-control form-select">
+              <select name="city" id="" required class="form-control form-select">
                 <option value="">City</option>
-                <option value="">Jakarta Barat</option>
-                <option value="">Jakarta Pusat</option>
-                <option value="">Jakarta Timur</option>
-                <option value="">Jakarta Selatan</option>
-                <option value="">Jakarta Utara</option>
+                <option value="CITY_1">Jakarta Barat</option>
+                <option value="CITY_2">Jakarta Pusat</option>
+                <option value="CITY_3">Jakarta Timur</option>
+                <option value="CITY_4">Jakarta Selatan</option>
+                <option value="CITY_5">Jakarta Utara</option>
               </select>
+              <div class="invalid-feedback text-dark">This field is required</div>
             </div>
             <div class="input-wrapper">
               <label class="form-label">Knows Jangjo from</label>
-              <select id="disabledSelect" class="form-control form-select">
-                <option>Select your answer</option>
+              <select name="jangjo" required class="form-control form-select">
+                <option value="">Select your answer</option>
+                <option value="1">Option 1</option>
               </select>
+              <div class="invalid-feedback text-dark">This field is required</div>
             </div>
             <div class="input-wrapper">
               <label class="form-label">Service</label>
-              <select id="disabledSelect" class="form-control form-select">
-                <option>Select service</option>
+              <select required name="service" class="form-control form-select">
+                <option value="">Select service</option>
+                <option value="1">Otion 1</option>
               </select>
+              <div class="invalid-feedback text-dark">This field is required</div>
             </div>
-            <button class="btn-dark btn-large w-100">Sign up</button>
+            <button type="submit" class="btn-dark btn-large w-100">Sign up</button>
           </form>
         </div>
         <div class="col-lg-6 mb-3">
@@ -793,12 +809,12 @@
         <div class="modal-body">
           
           <form
-          data-gotopage="https://www.dbs.id/id/sme-id/day-to-day/accounts.page?logStat=accepted"
-          form-submit-ajax="https://dbslivemoresociety.com/digibanking"
-          class="needs-validation mt-5 mb-4 "
-          novalidate 
-          data-inView="fadeInUp"
-          id="form-ibg"
+            data-gotopage="https://www.dbs.id/id/sme-id/day-to-day/accounts.page?logStat=accepted"
+            form-submit-ajax="https://dbslivemoresociety.com/digibanking"
+            class="needs-validation mt-5 mb-4 "
+            novalidate 
+            data-inView="fadeInUp"
+            id="form-ibg"
           >
             <div class="row justify-content-center">
               <div class="col-md-10">
@@ -882,6 +898,7 @@
   <script src="/assets/glightbox/js/glightbox.min.js"></script>
   <!-- <script src="/assets/js/jquery.cookie.min.js"></script>
   <script src="/assets/js/form.js"></script> -->
+  <script src="/assets/js/form-footer.js"></script>
   <script src="/assets/js/form-handler.js"></script>
   <script src="/assets/js/main.js"></script>
   <script>

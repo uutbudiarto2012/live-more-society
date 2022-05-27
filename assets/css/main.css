@@ -648,7 +648,6 @@ article p {
 .form-section .input-wrapper .form-control {
   height: 60px;
   border-radius: 0;
-  border: 1px solid #424242;
   font-size: 22px;
   font-weight: 300;
 }
